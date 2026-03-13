@@ -19,6 +19,16 @@ import Layout from '../layouts/Layout.astro';
 					<a class="text-sm font-semibold transition-colors hover:text-primary" href="#contact">İletişim</a>
 				</nav>
 				<div class="flex items-center gap-4">
+					<button
+						type="button"
+						data-theme-toggle
+						onclick="window.__calybkToggleTheme?.()"
+						class="flex size-11 items-center justify-center rounded-full border border-primary/20 transition-colors hover:bg-primary/10"
+						aria-label="Tema değiştir"
+						aria-pressed="false"
+					>
+						<span data-theme-icon class="material-symbols-outlined text-xl">dark_mode</span>
+					</button>
 					<a class="flex h-11 items-center rounded-full bg-primary px-6 text-sm font-bold text-slate-900 transition-transform hover:scale-105" href="#contact">Üye Ol</a>
 				</div>
 			</div>

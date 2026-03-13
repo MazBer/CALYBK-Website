@@ -9,6 +9,18 @@ import '../styles/global.css';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<script is:inline>
+			(() => {
+				try {
+					const stored = localStorage.getItem('theme');
+					const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+					const isDark = stored ? stored === 'dark' : prefersDark;
+					document.documentElement.classList.toggle('dark', isDark);
+				} catch {
+					// ignore
+				}
+			})();
+		</script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -24,6 +36,35 @@ import '../styles/global.css';
 	</head>
 	<body class="bg-background-light text-slate-900 font-display transition-colors duration-300 dark:bg-background-dark dark:text-slate-100">
 		<slot />
+		<script is:inline>
+			(() => {
+				const updateButtons = () => {
+					const isDark = document.documentElement.classList.contains('dark');
+					document.querySelectorAll('[data-theme-toggle]').forEach((el) => {
+						const icon = el.querySelector('[data-theme-icon]');
+						if (icon) icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+						el.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+					});
+				};
+
+				const setTheme = (theme) => {
+					document.documentElement.classList.toggle('dark', theme === 'dark');
+					try {
+						localStorage.setItem('theme', theme);
+					} catch {
+						// ignore
+					}
+					updateButtons();
+				};
+
+				window.__calybkToggleTheme = () => {
+					const isDark = document.documentElement.classList.contains('dark');
+					setTheme(isDark ? 'light' : 'dark');
+				};
+
+				updateButtons();
+			})();
+		</script>
 	</body>
 </html>
 
