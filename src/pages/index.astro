@@ -1,11 +1,229 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+		<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 px-6 py-4 backdrop-blur-md dark:bg-background-dark/80 lg:px-40">
+			<div class="flex items-center justify-between">
+				<div class="flex items-center gap-3">
+					<div class="flex size-10 items-center justify-center rounded-xl bg-primary shadow-lg shadow-primary/20">
+						<span class="material-symbols-outlined text-2xl text-slate-900">genetics</span>
+					</div>
+					<h2 class="text-xl font-black tracking-tight">CALYBK</h2>
+				</div>
+				<nav class="hidden items-center gap-10 md:flex">
+					<a class="text-sm font-semibold transition-colors hover:text-primary" href="#about">Biz Kimiz?</a>
+					<a class="text-sm font-semibold transition-colors hover:text-primary" href="#activities">Etkinlikler</a>
+					<a class="text-sm font-semibold transition-colors hover:text-primary" href="#news">Haberler</a>
+					<a class="text-sm font-semibold transition-colors hover:text-primary" href="#contact">İletişim</a>
+				</nav>
+				<div class="flex items-center gap-4">
+					<a class="flex h-11 items-center rounded-full bg-primary px-6 text-sm font-bold text-slate-900 transition-transform hover:scale-105" href="#contact">Üye Ol</a>
+				</div>
+			</div>
+		</header>
+
+		<main class="flex flex-col">
+			<section class="relative overflow-hidden px-6 pb-20 pt-12 lg:px-40">
+				<div class="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+				<div class="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-primary/5 blur-2xl"></div>
+				<div class="mx-auto max-w-7xl">
+					<div class="flex flex-col items-center gap-10 lg:flex-row">
+						<div class="z-10 flex flex-1 flex-col gap-8 text-left">
+							<div class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/20 px-4 py-1.5 text-slate-900 dark:text-primary">
+								<span class="material-symbols-outlined text-lg">rocket_launch</span>
+								<span class="text-xs font-bold uppercase tracking-wider">Geleceği Keşfet</span>
+							</div>
+							<h1 class="text-5xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-slate-50 lg:text-7xl">
+								Yaşam Bilimleri <br /> <span class="text-primary italic">Dünyasına</span> Hoş Geldin!
+							</h1>
+							<p class="max-w-xl text-lg text-slate-600 dark:text-slate-400 lg:text-xl">
+								Bilimin enerjisini hisset, keşfetmeye hazır mısın? Eğlenceli projeler, lab maceraları ve harika bir topluluk seni bekliyor.
+							</p>
+							<div class="flex flex-wrap gap-4">
+								<a class="flex h-14 items-center gap-2 rounded-xl bg-primary px-8 text-lg font-black text-slate-900 transition-all hover:shadow-xl hover:shadow-primary/30" href="#contact">
+									Bize Katıl <span class="material-symbols-outlined">arrow_forward</span>
+								</a>
+								<a class="flex h-14 items-center rounded-xl border-2 border-primary/30 px-8 text-lg font-bold text-slate-900 transition-all hover:border-primary dark:text-slate-100" href="#about">
+									Daha Fazla
+								</a>
+							</div>
+						</div>
+						<div class="relative w-full flex-1">
+							<div class="organic-shape relative mx-auto aspect-square w-full max-w-[500px] overflow-hidden bg-gradient-to-br from-primary to-green-500 shadow-2xl">
+								<img
+									class="h-full w-full object-cover mix-blend-overlay opacity-60"
+									alt="Laboratuvar teması"
+									src="https://lh3.googleusercontent.com/aida-public/AB6AXuAORW5ZVqhaj793i5KILrbO8F5gNupjaOloZRxZN1VuRuXUlIDZOfsVyd60AQCY_sB9kaLLWEqdSp4Uyr7TzfNGFe0dTtLi6C4WwFqwKMQG3LP1mXXtblNgMt3lE3gry4pW-P-b4L15aoaAwW8T4F_PuY2apCY_3rrWynM5IELqxE1WkygPZYUJ0uY5rohSSNgIYcaZGaaQasuUAdM83zCEUWQsX4dmnYL8lWtcJNK94ZktRS7ZIOn8U0NTkmD8HvWqVgOqygNpTt_1"
+								/>
+								<div class="absolute inset-0 flex items-center justify-center">
+									<span class="material-symbols-outlined text-[150px] text-white opacity-40">science</span>
+								</div>
+							</div>
+							<div class="absolute -bottom-6 -left-6 flex items-center gap-4 rounded-2xl border border-primary/10 bg-white p-4 shadow-xl dark:bg-background-dark">
+								<div class="rounded-lg bg-primary/20 p-2">
+									<span class="material-symbols-outlined text-primary">group</span>
+								</div>
+								<div>
+									<p class="text-xs font-bold uppercase text-slate-500">Aktif Üye</p>
+									<p class="text-xl font-black">500+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bg-white/50 px-6 py-24 dark:bg-background-dark/50 lg:px-40" id="about">
+				<div class="mx-auto max-w-4xl text-center">
+					<h2 class="mb-8 text-4xl font-black">Biz Kimiz?</h2>
+					<p class="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
+						CALYBK, sadece bir kulüp değil; meraklı zihinlerin, doğa aşıklarının ve bilim tutkunlarının buluşma noktası! Samimi bir ortamda hem öğreniyoruz hem de çok eğleniyoruz.
+					</p>
+					<div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+						<div class="rounded-2xl border border-primary/10 bg-primary/5 p-6 text-center">
+							<span class="material-symbols-outlined mb-4 block text-4xl text-primary">emoji_objects</span>
+							<h3 class="mb-2 text-lg font-bold">Merak</h3>
+							<p class="text-sm text-slate-600 dark:text-slate-400">Her zaman "neden" diye soruyoruz.</p>
+						</div>
+						<div class="rounded-2xl border border-primary/10 bg-primary/5 p-6 text-center">
+							<span class="material-symbols-outlined mb-4 block text-4xl text-primary">volunteer_activism</span>
+							<h3 class="mb-2 text-lg font-bold">Tutku</h3>
+							<p class="text-sm text-slate-600 dark:text-slate-400">Doğaya ve bilime aşığız.</p>
+						</div>
+						<div class="rounded-2xl border border-primary/10 bg-primary/5 p-6 text-center">
+							<span class="material-symbols-outlined mb-4 block text-4xl text-primary">diversity_3</span>
+							<h3 class="mb-2 text-lg font-bold">Birlik</h3>
+							<p class="text-sm text-slate-600 dark:text-slate-400">Birlikte daha güçlüyüz.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="px-6 py-24 lg:px-40" id="activities">
+				<div class="mb-12 flex items-end justify-between">
+					<div>
+						<h2 class="mb-4 text-4xl font-black">Neler Yapıyoruz?</h2>
+						<p class="text-slate-600 dark:text-slate-400">Kampüste hayat var, kulüpte etkinlik var!</p>
+					</div>
+					<a class="hidden font-bold text-primary underline-offset-4 hover:underline md:block" href="#activities">Tümünü Gör</a>
+				</div>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+					<div class="group cursor-pointer">
+						<div class="relative mb-6 aspect-[4/5] overflow-hidden rounded-3xl bg-primary/20">
+							<img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Etkinlik" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS33-B18VC_rF2cJw2CJaq4FPkhMTnVBdYTN0BHZAMmUHTlqyz3_tMwWoEYja-DxziodwNA5MWgNckbFWS_ZLFrPESEDH9rxvexqjr7VFztejyFQHG92DWLfsmoJSOMgdbCDRQJ6YZXW8UpiNzaBX6dJXcKY7YzedLUE-O1_Fw-JIu-a_Z_BjrnNH_CkcZBpJ4jvv_7EcTZ7zz1dPwynkrF0NlCyMiuEdVHcucHn97Ld_-_m5q-TnXXLGghpZfOGDzVg8BxF0SiGgT" />
+							<div class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-black uppercase dark:bg-background-dark/90">Etkinlikler</div>
+						</div>
+						<h3 class="mb-2 text-2xl font-bold">Sosyal Buluşmalar</h3>
+						<p class="text-slate-600 dark:text-slate-400">Network ağını genişletirken eğlencenin tadını çıkar.</p>
+					</div>
+					<div class="group cursor-pointer">
+						<div class="relative mb-6 aspect-[4/5] overflow-hidden rounded-3xl bg-primary/20">
+							<img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Atölye" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxp5AEVo0UdRcx4ww35yb3PcVUAf4urn4uZ0QZAdRugSgRjXIRSw0u0H6CljuDVwkQam4qKhHRESTNfIF7h713OoARk-zSKNKmAxOLfw7Bb88P2EC_cQnOaWDCqQOIHGFbr9-ZOGa9lb0XUejy7U8jtqCjYPBrxtqv3OmvGrQ17YEjqFMlOTkmlLTrXDn5dEqpfPZ5kJfCrCTS9Rb0JTpRfhL0MmOOUfgHeQ-DxzTD8Ih1o-9bsGPlKZ1k5z0m4yxYfAoqV_tvH5JI" />
+							<div class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-black uppercase dark:bg-background-dark/90">Workshop</div>
+						</div>
+						<h3 class="mb-2 text-2xl font-bold">Pratik Atölyeler</h3>
+						<p class="text-slate-600 dark:text-slate-400">Teorik bilgileri laboratuvarda gerçeğe dönüştür.</p>
+					</div>
+					<div class="group cursor-pointer">
+						<div class="relative mb-6 aspect-[4/5] overflow-hidden rounded-3xl bg-primary/20">
+							<img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Proje" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRJRCNA5AqRF5to3B2xOvfkkbzkvO45MW9Fj2FgUWmA6CelG03mJBYTAZkeJp-oJFjJfNQ9BGnrEjIy9JeG66OrxiuYqeCFNxkfys41sFu9Tt2NQk96D7rZmrQs7kuE0uBmwi8cUDzDe21YwPmBOMd3aL_-XcIUd5vj3h4Il7zsC8YSwmRjCFDbrQ0kGn6y9chFRm3YWyaIid5LvqEtOOvGq06BBvK46He5ngfVL9bSyCeRZf3mdhAezDvKehZzSBRgvdljL8vy4j-" />
+							<div class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-black uppercase dark:bg-background-dark/90">Projeler</div>
+						</div>
+						<h3 class="mb-2 text-2xl font-bold">AR-GE Grupları</h3>
+						<p class="text-slate-600 dark:text-slate-400">Yenilikçi projelerde yer al ve fark yarat.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="bg-primary/5 px-6 py-24 lg:px-40" id="news">
+				<h2 class="mb-12 text-center text-4xl font-black">Haberler &amp; Duyurular</h2>
+				<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+					{[
+						{
+							date: '12 Haz 2024',
+							title: 'Yeni Laboratuvar Ekipmanları Geldi!',
+							img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6ZcTjzWtgfgwYHsenhnKV6XzfurehYC6PKLcMySVmg3R_jtO0q_kOenxmbN1Rlsui7fUrkJDHpEfqb00JDXl1F8GZLWalAy0uk_5dvIoaFq2Ob6CUccVtlMX3yrpCUr5BimmjJBKPtYnZUrDWmSSDI5xrR7xAMYoqn2J65-B_T537dGUSm6zxrJjtMH60pESjhWS9WTZR4W5E9KWRf7wWEOusdMEqiiDxHX52PKvXaeEhBU-pmI82iR5kHigxQCgm2_b1TI42kV3p'
+						},
+						{
+							date: '10 Haz 2024',
+							title: "Biyoteknoloji Zirvesi'ndeydik",
+							img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC5UxyiGQc4UDlecp-uVPUmtCVT7hFUubeANcD2nMG09PzkozL1Tbm1E2Epd2UplDo9__kzntri5apvVgr9HDa2n8k4hThCBZdTle6jeY5zMoUxYrjH02vfGyVdf_bHMDERPuT1qfgxwwQo5SwGYkp5A18qhU0D3hoDeiHqDOFpPTl-eiEBn2hz7xoRtI-FEsbQldN_S3g3ttzQZs6ywK3E7BibfXNkvxCCLjYVMuAju_S-GP67ZXA5jJU1eHRZu6kbwOK_advxlrMn'
+						},
+						{
+							date: '05 Haz 2024',
+							title: 'Doğa Yürüyüşü ve Örnek Toplama',
+							img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDuFor5ozAD8w4pC3HpQwOup-QKWzIA2tEfDlf_8sjz46PTbuXETxcvTrZZN1m1xtWnQsGm52PYEVzJ32vK1jWJmurXJuBnmkALVelJsegZphqsDrJSTHUrneBILtZgqDxLQ_XXYkv5P1XlKdxeIh4PBIaOlbEInlbw3yCF8y9TakXL8eSaf8fGWEjdcCkX41sR0nSPDG5Gl_tMm_8MQpua9dMTypBJYCcqSzREwEc6UXhO62I0LWe3YSJIbuz8XAzcyyEch2t0LO8i'
+						},
+						{
+							date: '01 Haz 2024',
+							title: 'Makale Yazım Teknikleri Semineri',
+							img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCE3RUmGr6_Ijv75ryuZ10j9hsSOVTZFSCP1RrYf5p1b5v4NPaj28gP9SBajiDNnwq6OmA8u6N9_v0tra5NCG7J6XWmsHRBUrphx0OMz3w3c9LrNuPfLXMCFUTcR5Wtim604gMerTIjnVOZ-UDDOvdZ38ZnUQiU3uHqrP_aIE92XyONiibKiMfst7yyuKyoE5TJlDwyQbLop_npn7SL53aGB4L8dNXTisiAoym_OGD75KFh735meU3BLm5JGcHEK7UmwmzobW71pYcg'
+						}
+					].map((item) => (
+						<div class="rounded-2xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md dark:bg-background-dark">
+							<div class="mb-4 aspect-video w-full overflow-hidden rounded-xl bg-slate-200">
+								<img class="h-full w-full object-cover" alt={item.title} src={item.img} />
+							</div>
+							<span class="text-[10px] font-bold uppercase tracking-widest text-primary">{item.date}</span>
+							<h4 class="mt-2 font-bold leading-snug">{item.title}</h4>
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section class="px-6 py-20 lg:px-40" id="contact">
+				<div class="relative overflow-hidden rounded-[2.5rem] bg-slate-900 p-12 text-center lg:p-20">
+					<div class="absolute right-0 top-0 h-64 w-64 rounded-full bg-primary/20 blur-3xl"></div>
+					<div class="relative z-10">
+						<h2 class="mb-6 text-4xl font-black text-white lg:text-5xl">Maceraya Atılmaya Hazır Mısın?</h2>
+						<p class="mx-auto mb-10 max-w-2xl text-lg text-slate-300">Seni aramızda görmek için sabırsızlanıyoruz. Hemen formumuzu doldur ve ekibe dahil ol!</p>
+						<a class="inline-flex h-16 items-center rounded-2xl bg-primary px-10 text-xl font-black text-slate-900 shadow-lg shadow-primary/20 transition-transform hover:scale-105" href="#contact">
+							Hemen Kaydol
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="border-t border-primary/10 bg-white px-6 py-16 dark:bg-background-dark lg:px-40">
+			<div class="flex flex-col items-start justify-between gap-12 lg:flex-row">
+				<div class="flex flex-col gap-6">
+					<div class="flex items-center gap-3">
+						<div class="flex size-8 items-center justify-center rounded-lg bg-primary">
+							<span class="material-symbols-outlined text-xl text-slate-900">genetics</span>
+						</div>
+						<h2 class="text-xl font-black tracking-tight">CALYBK</h2>
+					</div>
+					<p class="max-w-xs text-slate-500">Yaşam bilimlerini seven, merak eden ve üreten bir öğrenci topluluğu.</p>
+				</div>
+				<div class="grid grid-cols-2 gap-16 md:grid-cols-3">
+					<div>
+						<h4 class="mb-6 text-xs font-black uppercase tracking-widest text-primary">Bağlantılar</h4>
+						<ul class="flex flex-col gap-4 text-sm font-medium">
+							<li><a class="transition-colors hover:text-primary" href="#about">Hakkımızda</a></li>
+							<li><a class="transition-colors hover:text-primary" href="#activities">Etkinlikler</a></li>
+							<li><a class="transition-colors hover:text-primary" href="#news">Haberler</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="mb-6 text-xs font-black uppercase tracking-widest text-primary">Katıl</h4>
+						<ul class="flex flex-col gap-4 text-sm font-medium">
+							<li><a class="transition-colors hover:text-primary" href="#contact">Üyelik Formu</a></li>
+							<li><a class="transition-colors hover:text-primary" href="#contact">Gönüllü Ol</a></li>
+						</ul>
+					</div>
+					<div class="col-span-2 md:col-span-1">
+						<h4 class="mb-6 text-xs font-black uppercase tracking-widest text-primary">İletişim</h4>
+						<p class="mb-2 text-sm text-slate-500">Cağaloğlu Anadolu Lisesi</p>
+						<p class="text-sm font-bold">merhaba@calybk.com</p>
+					</div>
+				</div>
+			</div>
+			<div class="mt-16 border-t border-primary/5 pt-8 text-center">
+				<p class="text-xs text-slate-400">© 2026 CALYBK Yaşam Bilimleri Kulübü. Bilimle kal!</p>
+			</div>
+		</footer>
+	</div>
 </Layout>
